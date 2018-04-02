@@ -1,0 +1,31 @@
+{
+  "name": "mmall-fe",
+  "version": "1.0.0",
+  "description": "前端代码",
+  "main": "index.js",
+  "scripts": {
+    "dev_win" : "set WEBPACK_ENV=dev && webpack-dev-server --inline --port 8088",
+    "dist_win" : "set WEBPACK_ENV=online && webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZH-Dreamwear/mmall-fe.git"
+  },
+  "author": "Dreamwear",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZH-Dreamwear/mmall-fe/issues"
+  },
+  "homepage": "https://github.com/ZH-Dreamwear/mmall-fe#readme",
+  "devDependencies": {
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^1.1.11",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.1.0",
+    "style-loader": "^0.20.3",
+    "url-loader": "^1.0.1",
+    "webpack": "^1.15.0",
+    "webpack-dev-server": "^1.16.5"
+  }
+}
