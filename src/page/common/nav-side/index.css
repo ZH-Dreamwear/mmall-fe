@@ -1,0 +1,25 @@
+/**
+ * @Date:   2018-12-20T15:03:27+08:00
+ * @Last modified time: 2018-12-20T15:17:22+08:00
+ */
+
+/*导航主体样式*/
+.nav-side {
+  float: left;
+  width: 130px;
+}
+.nav-side .nav-item {
+  line-height: 25px;
+  font-size: 13px;
+}
+.nav-side .nav-item .link {
+  color: #888;
+}
+.nav-side .nav-item.active .link {
+  color: red;
+}
+/*右侧内容区*/
+.content.with-nav {
+  float: left;
+  width: 950px;
+}

@@ -1,0 +1,21 @@
+/**
+ * @Date:   2018-12-03T18:15:27+08:00
+ * @Last modified time: 2018-12-20T16:23:04+08:00
+ */
+
+
+
+.nav-simple {
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+}
+.nav-simple a {
+  text-decoration: none;
+}
+.nav-simple .logo{
+  font-size: 26px;
+  font-weight: bold;
+  color: #c60023;
+}

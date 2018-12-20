@@ -5,5 +5,4 @@
 * @Last Modified time: 2018-04-01 14:21:39
 */
 'use strict';
-require('../module.js');
 console.log('hello login');
