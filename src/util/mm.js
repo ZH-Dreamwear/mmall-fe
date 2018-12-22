@@ -1,8 +1,8 @@
 /*
 * @Author: Administrator
 * @Date:   2018-04-03 11:07:53
- * @Last modified by:   
- * @Last modified time: 2018-12-20T15:58:41+08:00
+ * @Last modified by:
+ * @Last modified time: 2018-12-22T13:13:51+08:00
 */
 
 'use strict';
@@ -84,7 +84,7 @@ var _mm = {
 	},
 	doLogin : function(){
 		//从哪里开始登陆，登陆成功就跳到当前页面，而不是跳到主页，encodeURIComponent转码
-		window.location.href = './login.html?redirect=' + encodeURIComponent(window.location);
+		window.location.href = './user-login.html?redirect=' + encodeURIComponent(window.location);
 	},
 	//跳到主页
 	goHome : function(){

@@ -1,8 +1,8 @@
 /*
 * @Author: Administrator
 * @Date:   2018-03-24 23:56:00
- * @Last modified by:   
- * @Last modified time: 2018-12-20T16:09:17+08:00
+ * @Last modified by:
+ * @Last modified time: 2018-12-22T16:20:36+08:00
 */
 var webpack = require('webpack');
 //单独提取CSS插件
@@ -31,7 +31,12 @@ var config = {
 	entry: {
 		'common' : ['./src/page/common/index.js'],
 		'index' : ['./src/page/index/index.js'],
-		'login' : ['./src/page/login/index.js'],
+		'user-login' : ['./src/page/user-login/index.js'],
+		'user-register' : ['./src/page/user-register/index.js'],
+		'user-pass-reset' : ['./src/page/user-pass-reset/index.js'],
+		'user-center' : ['./src/page/user-center/index.js'],
+		'user-center-update' : ['./src/page/user-center-update/index.js'],
+		'user-pass-update' : ['./src/page/user-pass-update/index.js'],
 		'result' : ['./src/page/result/index.js']
 	},
 	/*这样配置会出现login覆盖index的情况，所以只有login*/
@@ -84,9 +89,25 @@ var config = {
 		new ExtractTextPlugin("css/[name].css"),
 		//HTML模板的处理
 		new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
-		new HtmlWebpackPlugin(getHtmlConfig('login', '用户登录')),
+		new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登录')),
+		new HtmlWebpackPlugin(getHtmlConfig('user-register', '用户注册')),
+		new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset', '密码找回')),
+		new HtmlWebpackPlugin(getHtmlConfig('user-center', '用户中心')),
+		new HtmlWebpackPlugin(getHtmlConfig('user-center-update', '用户中心更新')),
+		new HtmlWebpackPlugin(getHtmlConfig('user-pass-update', '密码修改')),
 		new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果'))
-	]
+	],
+	//配置代理服务器,匹配所有.do结尾的请求 http://test.happymmall.com
+	devServer: {
+        port: 8088,
+        inline: true,
+        proxy : {
+            '**/*.do' : {
+                target: 'http://test.happymmall.com',
+                changeOrigin : true
+            }
+        }
+    }
 };
 
 if('dev' === WEBPACK_ENV){
