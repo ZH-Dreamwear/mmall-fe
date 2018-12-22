@@ -1,0 +1,17 @@
+/**
+ * @Date:   2018-12-20T13:36:38+08:00
+ * @Last modified time: 2018-12-20T13:58:08+08:00
+ */
+.footer {
+  padding-bottom: 10px;
+}
+.footer .links {
+  text-align: center;
+  color: #666;
+  line-height: 30px;
+}
+.footer .copyright {
+  text-align: center;
+  color: #666;
+  line-height: 30px;
+}

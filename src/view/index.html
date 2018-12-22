@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!--这里使用ejs模板语法插入header组件，前面需要指定html-loader去做这个操作-->
+		<%= require('html-loader!./layout/head-common.html') %>
+		<title><%= htmlWebpackPlugin.options.title %> - happymmall电商平台</title>
+	</head>
+	<body>
+		<%= require('html-loader!./layout/nav.html') %>
+		<%= require('html-loader!./layout/header.html') %>
+		<div class="page-wrap w">
+			<%= require('html-loader!./layout/nav-side.html') %>
+			<div class="content with-nav">test</div>
+		</div>
+		<%= require('html-loader!./layout/footer.html') %>
+	</body>
+</html>
