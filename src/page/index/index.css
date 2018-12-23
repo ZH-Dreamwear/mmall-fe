@@ -1,11 +1,114 @@
 /*
 * @Author: Administrator
 * @Date:   2018-04-01 14:42:17
-* @Last Modified by:   Administrator
-* @Last Modified time: 2018-04-02 09:35:48
+ * @Last modified by:
+ * @Last modified time: 2018-12-23T15:20:32+08:00
 */
 
-body {
-	/* background: url('../../image/test.jpg');
-	font-size: 100px; */
+/*左侧导航部分样式*/
+.keywords-list {
+  float: left;
+  width: 240px;
+  /*这里使用定高是因为要和轮播图对齐高度*/
+  height: 350px;
+  padding: 10px 0;
+  margin-right: 10px;
+  background: #666;
+  color: #fff;
+}
+.keywords-list .keywords-item {
+  padding-left: 10px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 14px;
+}
+.keywords-list .keywords-item:hover {
+  background: #999;
+}
+.keywords-list .keywords-item .link {
+  margin-right: 6px;
+  color: #fff;
+}
+.keywords-list .keywords-item .link:hover {
+  color: #c60023;
+}
+
+/*banner-con*/
+.banner-con {
+  width: 830px;
+  float: left;
+  height: 370px;
+  background: #eee;
+}
+
+/*banner组件中的图片需要铺满容器*/
+.banner-con .banner-img {
+  width: 100%;
+  height: 370px;
+}
+/*bannerd 左右箭头样式*/
+.banner-con .banner-arrow {
+  position: absolute;
+  top: 160px;
+  width: 30px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+  background: #ccc;
+  background: rgba(0,0,0,.2);
+  cursor: pointer;
+}
+.banner-con .banner-arrow:hover {
+  background: #aaa;
+  background: rgba(0,0,0,.5);
+}
+/*右箭头需要放到右边*/
+.banner-con .banner-arrow.next {
+  position: absolute;
+  right: 0;
+}
+
+/*floor*/
+.floor-wrap .floor-title {
+  height: 50px;
+  line-height: 50px;
+  color: #d58717;
+  font-weight: normal;
+  font-size: 20px;
+  border-bottom: 1px solid #d58717;
+}
+.floor-wrap .floor-list .floor-item {
+  position:relative;
+  width: 200px;
+  height: 220px;
+  margin: 15px 20px 15px 0;
+  float: left;
+  cursor: pointer;
+  background: #fff;
+}
+/*一个阴影特效*/
+.floor-wrap .floor-list .floor-item:hover{
+  box-shadow: 1px 1px 7px #ddd;
+}
+ul.floor-list { list-style: none;}
+.floor-wrap .floor-list {
+  margin-right: -20px;
+  overflow: auto;
+}
+.floor-wrap .floor-list .floor-item .floor-text {
+  position: absolute;
+  top: 12px;
+  left: 20px;
+  font-size: 16px;
+  color: #555;
+}
+.floor-wrap .floor-list .floor-item .floor-img {
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
+  width: 80%;
+  height: 75%;
+  border:none;
 }

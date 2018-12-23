@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2018-03-24 23:56:00
  * @Last modified by:
- * @Last modified time: 2018-12-22T16:20:36+08:00
+ * @Last modified time: 2018-12-23T16:19:55+08:00
 */
 var webpack = require('webpack');
 //单独提取CSS插件
@@ -31,6 +31,7 @@ var config = {
 	entry: {
 		'common' : ['./src/page/common/index.js'],
 		'index' : ['./src/page/index/index.js'],
+		'list' : ['./src/page/list/index.js'],
 		'user-login' : ['./src/page/user-login/index.js'],
 		'user-register' : ['./src/page/user-register/index.js'],
 		'user-pass-reset' : ['./src/page/user-pass-reset/index.js'],
@@ -89,6 +90,7 @@ var config = {
 		new ExtractTextPlugin("css/[name].css"),
 		//HTML模板的处理
 		new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
+		new HtmlWebpackPlugin(getHtmlConfig('list', '商品列表页')),
 		new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登录')),
 		new HtmlWebpackPlugin(getHtmlConfig('user-register', '用户注册')),
 		new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset', '密码找回')),
