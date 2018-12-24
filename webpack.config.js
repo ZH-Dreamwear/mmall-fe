@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2018-03-24 23:56:00
  * @Last modified by:
- * @Last modified time: 2018-12-23T21:06:52+08:00
+ * @Last modified time: 2018-12-24T14:26:05+08:00
 */
 var webpack = require('webpack');
 //单独提取CSS插件
@@ -33,6 +33,7 @@ var config = {
 		'index' : ['./src/page/index/index.js'],
 		'list' : ['./src/page/list/index.js'],
 		'detail' : ['./src/page/detail/index.js'],
+		'cart' : ['./src/page/cart/index.js'],
 		'user-login' : ['./src/page/user-login/index.js'],
 		'user-register' : ['./src/page/user-register/index.js'],
 		'user-pass-reset' : ['./src/page/user-pass-reset/index.js'],
@@ -93,6 +94,7 @@ var config = {
 		new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
 		new HtmlWebpackPlugin(getHtmlConfig('list', '商品列表页')),
 		new HtmlWebpackPlugin(getHtmlConfig('detail', '商品详情页')),
+		new HtmlWebpackPlugin(getHtmlConfig('cart', '购物车页')),
 		new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登录')),
 		new HtmlWebpackPlugin(getHtmlConfig('user-register', '用户注册')),
 		new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset', '密码找回')),
